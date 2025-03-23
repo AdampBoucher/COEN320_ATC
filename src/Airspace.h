@@ -1,4 +1,6 @@
-void Airspace {
-	int[3] volume;
-	int minimumAltitude;
+#pragma once
+
+struct Airspace {
+	int volume[3] = {100000, 100000, 25000};
+	int minimumHeight = 15000;
 };
