@@ -1,4 +1,4 @@
-# Prerequisites
+# ─── QNX/C++ Build Artifacts ─────────────────────────
 *.d
 
 # Compiled Object files
@@ -11,16 +11,12 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
+# Compiled Dynamic Libraries
 *.so
 *.dylib
 *.dll
 
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
+# Compiled Static Libraries
 *.lai
 *.la
 *.a
@@ -30,3 +26,24 @@
 *.exe
 *.out
 *.app
+atc  # your compiled binary if named this way
+
+# ─── Log and Output Files ────────────────────────────
+airspace_log.csv
+operator_log.txt
+
+# ─── macOS Hidden Files ──────────────────────────────
+.DS_Store
+
+# ─── IDE/Editor Directories ──────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+
+# ─── CMake/Build Tools ───────────────────────────────
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
