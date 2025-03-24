@@ -13,23 +13,24 @@ Aircraft::Aircraft(int id, int arrivalTime, position_t arrivalPosition, speed_t 
 	thread(0),
 	planeArrived(false),
 	planeLeft(false) {
-
 }
 
 void Aircraft::start() {
 	int threadId = pthread_create(&thread, NULL, startThread, this);
-	if(threadId < 0) {
-		//handle error
-		printf(":(\n");
+	if (threadId < 0) {
+		printf(":( thread creation failed\n");
 	}
 }
 
 void Aircraft::update() {
-	if(!planeArrived)
+	if (!planeArrived)
 		planeArrived = true;
-	arrivalPosition.x++;
-	printf("%d ID: %d thread: %lu \n",arrivalPosition.x, id, (unsigned long)pthread_self());
-	if(arrivalPosition.x>4) {
+
+	arrivalPosition.x++;  // Simple motion in X for now
+
+	printf("%d ID: %d thread: %lu \n", arrivalPosition.x, id, (unsigned long)pthread_self());
+
+	if (arrivalPosition.x > 4) {
 		planeLeft = true;
 	}
 }
@@ -47,20 +48,18 @@ void* Aircraft::startThread(void* arg) {
 
 	if (timer_create(CLOCK_REALTIME, &sev, &timer) == -1) {
 		printf("timer create failed\n");
-	    //handle error
 	}
 
-	its.it_value.tv_sec = aircraft->arrivalTime;  // Initial expiration after 2 seconds
+	its.it_value.tv_sec = aircraft->arrivalTime;
 	its.it_value.tv_nsec = 0;
-	its.it_interval.tv_sec = AIRCRAFT_CALLBACK_RATE; // Repeat every 1 second
+	its.it_interval.tv_sec = AIRCRAFT_CALLBACK_RATE;
 	its.it_interval.tv_nsec = 0;
 
-	if(timer_settime(timer, 0, &its, NULL) == -1) {
+	if (timer_settime(timer, 0, &its, NULL) == -1) {
 		printf("set time failed\n");
-		//handle error
 	}
 
-	while(!aircraft->planeLeft) {
+	while (!aircraft->planeLeft) {
 		sleep(1);
 	}
 
@@ -73,9 +72,7 @@ void Aircraft::timerCallback(union sigval arg) {
 }
 
 void Aircraft::join() {
-	if(pthread_join(thread, NULL) != 0) {
-		//handle error
-		printf("join bad\n");
+	if (pthread_join(thread, NULL) != 0) {
+		printf("join failed\n");
 	}
 }
-
