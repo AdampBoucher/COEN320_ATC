@@ -2,7 +2,6 @@
 #define OPERATORCOMMAND_H
 
 #include <string>
-#include <optional>
 
 enum class CommandType {
     SET_SPEED,
@@ -21,8 +20,8 @@ struct OperatorCommand {
 
 class OperatorCommandParser {
 public:
-    // Parses a raw command string
-    static std::optional<OperatorCommand> parse(const std::string& input);
+    // Returns true if parse successful
+    static bool parse(const std::string& input, OperatorCommand& commandOut);
 };
 
 #endif 
