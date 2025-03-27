@@ -48,10 +48,10 @@ int main(void) {
 			std::cout << "\n[SIM TIME " << simulationTime << "s] Enter operator command: ";
 			std::getline(std::cin, input);
 
-			auto parsed = OperatorCommandParser::parse(input);
-			if (parsed) {
+			OperatorCommand parsedCommand;
+			if (OperatorCommandParser::parse(input, parsedCommand)) {
 				Logger::logCommand(input, simulationTime);
-				std::cout << "Command logged for aircraft: " << parsed->aircraftId << "\n";
+				std::cout << "Command logged for aircraft: " << parsedCommand.aircraftId << "\n";
 			} else {
 				std::cout << "Invalid command format.\n";
 			}
