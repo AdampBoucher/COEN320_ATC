@@ -47,3 +47,19 @@ CMakeCache.txt
 cmake_install.cmake
 Makefile
 build/
+
+# Logs and runtime data
+airspace_log.csv
+operator_log.txt
+
+# macOS
+.DS_Store
+
+# Binaries
+*.out
+*.o
+AircraftProcess
+ComputerSystem
+RadarSystem
+OperatorConsole
+DataDisplay
