@@ -1,0 +1,12 @@
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/RELEASE=7.1.0
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/arch=aarch64le
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/name=192.168.141.9
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/org.eclipse.cdt.dsf.gdb.HOST=192.168.141.9
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/org.eclipse.cdt.dsf.gdb.PORT=8080
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/org.eclipse.cdt.dsf.gdb.REMOTE_TCP=true
+LaunchTargetManager/com.qnx.tools.ide.target.qconn,192.168.141.9/os=qnx
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.141.9
+eclipse.preferences.version=1

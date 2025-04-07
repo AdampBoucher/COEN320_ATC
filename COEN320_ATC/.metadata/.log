@@ -1,0 +1,121 @@
+!SESSION 2025-04-06 19:57:30.614 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:01:55.946
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:01:55.946
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:01:55.946
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:01:55.946
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2025-04-06 20:01:55.946
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2025-04-06 20:01:55.946
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2025-04-06 20:01:56.071
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2025-04-06 20:01:56.243
+!MESSAGE Using previous doc directory C:\QNX\SDP\target\qnx7\usr\help
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2025-04-06 20:01:56.274
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2025-04-06 20:01:56.274
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2023-10-06T13:14:00Z)
+
+!ENTRY com.qnx.tools.ide.core 4 0 2025-04-06 20:01:56.305
+!MESSAGE Key not found for the requested serial number
+!STACK 0
+com.qnx.install.LicenseFileParsingException: Key not found for the requested serial number
+	at com.qnx.install.License.getKeyFromDocument(License.java:448)
+	at com.qnx.install.License.getKeyFromSerial(License.java:346)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.checkOutLic(IDELicenseCheck.java:171)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.getPELicenseStatus(IDELicenseCheck.java:69)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.getPELicenseStatus(IDELicenseCheck.java:89)
+	at com.qnx.tools.ide.qde.ui.licensing.QNXLicenseCheck$1.run(QNXLicenseCheck.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 4 0 2025-04-06 20:03:56.317
+!MESSAGE Key not found for the requested serial number
+
+!ENTRY com.qnx.swupdate.common.license.HeartbeatManager 1 0 2025-04-06 20:03:56.514
+!MESSAGE Sending heartbeat request to https://www.qnx.com/api/1/heartbeat/poller.php
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2025-04-06 20:03:56.944
+!MESSAGE Successful response: {"transaction":"PsKP2-Hdd7f-ImvIY-pdo7J-Co4jz-Wtl3F","next_send":"2025-05-06T20:04:14Z","licenses":{"9611979":{"activation_status":"not_activated","status_code":9,"status_message":"Invalid Serial and License key","license_key":"KEYE-RR0R"}},"uid_a":"pS79HaRVnYb5lGNj61He","uid_b":"bbiITwbnDgQIYzG1Qg4J","uid_c":"UnpjpDmpvlW5jn1mF5Dh"}
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 4 0 2025-04-06 20:03:56.953
+!MESSAGE FAILED LICENSES: {com.qnx.swupdate.common.license.HeartbeatResponse$ServerLicenseState(serialNumber=9611979, key=KEYE-RR0R, activationState=NOT_ACTIVATED, statusCode=INVALID_SERIAL_NUMBER_AND_KEY, statusMessage="Invalid Serial and License key")=Optional[Status OK: com.qnx.tools.license code=0 License OK]}
+
+!ENTRY com.qnx.tools.ide.heartbeat.licenseHandler.LicenseHandler 1 0 2025-04-06 20:03:56.956
+!MESSAGE Handling failed heartbeat licenses: {com.qnx.swupdate.common.license.HeartbeatResponse$ServerLicenseState(serialNumber=9611979, key=KEYE-RR0R, activationState=NOT_ACTIVATED, statusCode=INVALID_SERIAL_NUMBER_AND_KEY, statusMessage="Invalid Serial and License key")=Optional[Status OK: com.qnx.tools.license code=0 License OK]}
+
+!ENTRY com.qnx.tools.ide.heartbeat.licenseHandler.LicenseHandler 1 0 2025-04-06 20:03:56.959
+!MESSAGE LC9: License Compliance Issue (license key KEYE-RR0R): Invalid Serial and License key
+Please visit https://www.myqnx.com for more info.
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2025-04-06 20:03:56.962
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2025-04-06 20:03:56.965
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2025-05-06T20:04:14Z)
+!SESSION 2025-04-06 20:08:28.080 -----------------------------------------------
+eclipse.buildId=7.1.2
+java.version=11.0.10
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:08:36.044
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.core.recursiveMkProject
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2025-04-06 20:08:36.048
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid activityId com.qnx.tools.ide.capabilities.ui.activity.qnxSystemDeveloper
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:08:36.050
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.qnx.tools.ide.capabilities.ui 4 0 2025-04-06 20:08:36.053
+!MESSAGE activityProfiles.activityRequirementBinding: Invalid requiredActivityId com.qnx.tools.ide.capabilities.ui.activity.qnxDeveloper
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:08:36.055
+!MESSAGE Enablement expression is missing for config provider for com.qnx.tools.ide.qde.debug.core.descriptorType.default
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-04-06 20:08:36.058
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2025-04-06 20:08:36.154
+!MESSAGE License heartbeats are enabled (automatically)
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.MomenticsHeartbeatClient 1 0 2025-04-06 20:08:36.392
+!MESSAGE Successfully created a momentics heartbeat client
+
+!ENTRY com.qnx.tools.ide.heartbeat.core.HeartbeatJob 1 0 2025-04-06 20:08:36.392
+!MESSAGE Heartbeat Job constructed with Invocation ON_SERVER_NEXT_SEND (scheduled to run at 2025-05-06T20:04:14Z)
+
+!ENTRY com.qnx.tools.ide.core 2 0 2025-04-06 20:08:36.423
+!MESSAGE Using previous doc directory C:\QNX\SDP\target\qnx7\usr\help
+
+!ENTRY com.qnx.tools.ide.core 4 0 2025-04-06 20:08:36.438
+!MESSAGE Key not found for the requested serial number
+!STACK 0
+com.qnx.install.LicenseFileParsingException: Key not found for the requested serial number
+	at com.qnx.install.License.getKeyFromDocument(License.java:448)
+	at com.qnx.install.License.getKeyFromSerial(License.java:346)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.checkOutLic(IDELicenseCheck.java:171)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.getPELicenseStatus(IDELicenseCheck.java:69)
+	at com.qnx.tools.ide.core.license.IDELicenseCheck.getPELicenseStatus(IDELicenseCheck.java:89)
+	at com.qnx.tools.ide.qde.ui.licensing.QNXLicenseCheck$1.run(QNXLicenseCheck.java:55)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
